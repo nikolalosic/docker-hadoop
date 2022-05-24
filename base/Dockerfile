@@ -1,4 +1,4 @@
-FROM debian:10
+FROM debian:11
 
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 MAINTAINER Giannis Mouchakis <gmouchakis@iit.demokritos.gr>
@@ -17,7 +17,7 @@ RUN curl -O https://dist.apache.org/repos/dist/release/hadoop/common/KEYS
 
 RUN gpg --import KEYS
 
-ENV HADOOP_VERSION=3.3.1
+ENV HADOOP_VERSION=3.3.3
 # base URL for downloads: the name of the tar file depends
 # on the target platform (amd64/x86_64 vs. arm64/aarch64)
 ENV HADOOP_BASE_URL=https://www.apache.org/dist/hadoop/common/hadoop-$HADOOP_VERSION
